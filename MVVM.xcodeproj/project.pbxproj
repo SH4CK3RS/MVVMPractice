@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		42A380E125FFA37F00B1DB4C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A380E025FFA37F00B1DB4C /* Observable.swift */; };
 		42A380E925FFAA8500B1DB4C /* MoviesListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A380E825FFAA8500B1DB4C /* MoviesListItemCell.swift */; };
+		42A380EE25FFB22000B1DB4C /* MoviesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A380ED25FFB22000B1DB4C /* MoviesListTableViewController.swift */; };
+		42A380F725FFB51500B1DB4C /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A380F625FFB51500B1DB4C /* MVVMTests.swift */; };
+		42A3810225FFB54600B1DB4C /* Movie+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3810125FFB54600B1DB4C /* Movie+Stub.swift */; };
+		42A3810725FFB57300B1DB4C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44B925FF48D500744580 /* Movie.swift */; };
 		AA5D44A325FF488500744580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44A225FF488500744580 /* AppDelegate.swift */; };
 		AA5D44A725FF488500744580 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44A625FF488500744580 /* ViewController.swift */; };
 		AA5D44AA25FF488500744580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5D44A825FF488500744580 /* Main.storyboard */; };
@@ -30,9 +34,24 @@
 		AA5D44FC25FF534600744580 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44FB25FF534600744580 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		42A380F925FFB51500B1DB4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA5D449725FF488500744580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA5D449E25FF488500744580;
+			remoteInfo = MVVM;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		42A380E025FFA37F00B1DB4C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		42A380E825FFAA8500B1DB4C /* MoviesListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListItemCell.swift; sourceTree = "<group>"; };
+		42A380ED25FFB22000B1DB4C /* MoviesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewController.swift; sourceTree = "<group>"; };
+		42A380F425FFB51500B1DB4C /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A380F625FFB51500B1DB4C /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
+		42A380F825FFB51500B1DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A3810125FFB54600B1DB4C /* Movie+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+Stub.swift"; sourceTree = "<group>"; };
 		AA5D449F25FF488500744580 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5D44A225FF488500744580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5D44A625FF488500744580 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42A380F125FFB51500B1DB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5D449C25FF488500744580 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				42A380E725FFAA6300B1DB4C /* Cells */,
+				42A380ED25FFB22000B1DB4C /* MoviesListTableViewController.swift */,
 			);
 			path = MoviesListTableView;
 			sourceTree = "<group>";
@@ -124,10 +151,29 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		42A380F525FFB51500B1DB4C /* MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				42A3810025FFB51D00B1DB4C /* Mocks */,
+				42A380F625FFB51500B1DB4C /* MVVMTests.swift */,
+				42A380F825FFB51500B1DB4C /* Info.plist */,
+			);
+			path = MVVMTests;
+			sourceTree = "<group>";
+		};
+		42A3810025FFB51D00B1DB4C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				42A3810125FFB54600B1DB4C /* Movie+Stub.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		AA5D449625FF488500744580 = {
 			isa = PBXGroup;
 			children = (
 				AA5D44A125FF488500744580 /* MVVM */,
+				42A380F525FFB51500B1DB4C /* MVVMTests */,
 				AA5D44A025FF488500744580 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AA5D449F25FF488500744580 /* MVVM.app */,
+				42A380F425FFB51500B1DB4C /* MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +306,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		42A380F325FFB51500B1DB4C /* MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A380FB25FFB51500B1DB4C /* Build configuration list for PBXNativeTarget "MVVMTests" */;
+			buildPhases = (
+				42A380F025FFB51500B1DB4C /* Sources */,
+				42A380F125FFB51500B1DB4C /* Frameworks */,
+				42A380F225FFB51500B1DB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42A380FA25FFB51500B1DB4C /* PBXTargetDependency */,
+			);
+			name = MVVMTests;
+			productName = MVVMTests;
+			productReference = 42A380F425FFB51500B1DB4C /* MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AA5D449E25FF488500744580 /* MVVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5D44B325FF488700744580 /* Build configuration list for PBXNativeTarget "MVVM" */;
@@ -282,9 +347,13 @@
 		AA5D449725FF488500744580 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					42A380F325FFB51500B1DB4C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AA5D449E25FF488500744580;
+					};
 					AA5D449E25FF488500744580 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -304,11 +373,19 @@
 			projectRoot = "";
 			targets = (
 				AA5D449E25FF488500744580 /* MVVM */,
+				42A380F325FFB51500B1DB4C /* MVVMTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		42A380F225FFB51500B1DB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5D449D25FF488500744580 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +399,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		42A380F025FFB51500B1DB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A3810225FFB54600B1DB4C /* Movie+Stub.swift in Sources */,
+				42A380F725FFB51500B1DB4C /* MVVMTests.swift in Sources */,
+				42A3810725FFB57300B1DB4C /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5D449B25FF488500744580 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +419,7 @@
 				42A380E925FFAA8500B1DB4C /* MoviesListItemCell.swift in Sources */,
 				AA5D44BA25FF48D500744580 /* Movie.swift in Sources */,
 				42A380E125FFA37F00B1DB4C /* Observable.swift in Sources */,
+				42A380EE25FFB22000B1DB4C /* MoviesListTableViewController.swift in Sources */,
 				AA5D44BF25FF495500744580 /* MovieQuery.swift in Sources */,
 				AA5D44FC25FF534600744580 /* NetworkService.swift in Sources */,
 				AA5D44EC25FF4FBB00744580 /* DefaultMoviesRepository.swift in Sources */,
@@ -348,6 +436,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42A380FA25FFB51500B1DB4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA5D449E25FF488500744580 /* MVVM */;
+			targetProxy = 42A380F925FFB51500B1DB4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AA5D44A825FF488500744580 /* Main.storyboard */ = {
@@ -369,6 +465,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		42A380FC25FFB51500B1DB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97C96KP84G;
+				INFOPLIST_FILE = MVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.byeonggeunSon.Practice.MVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM.app/MVVM";
+			};
+			name = Debug;
+		};
+		42A380FD25FFB51500B1DB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97C96KP84G;
+				INFOPLIST_FILE = MVVMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.byeonggeunSon.Practice.MVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM.app/MVVM";
+			};
+			name = Release;
+		};
 		AA5D44B125FF488700744580 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -526,6 +664,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		42A380FB25FFB51500B1DB4C /* Build configuration list for PBXNativeTarget "MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A380FC25FFB51500B1DB4C /* Debug */,
+				42A380FD25FFB51500B1DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA5D449A25FF488500744580 /* Build configuration list for PBXProject "MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
