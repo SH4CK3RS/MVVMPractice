@@ -13,6 +13,7 @@
 		42A380F725FFB51500B1DB4C /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A380F625FFB51500B1DB4C /* MVVMTests.swift */; };
 		42A3810225FFB54600B1DB4C /* Movie+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3810125FFB54600B1DB4C /* Movie+Stub.swift */; };
 		42A3810725FFB57300B1DB4C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44B925FF48D500744580 /* Movie.swift */; };
+		42A3810D25FFB6EA00B1DB4C /* SearchMoviesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3810C25FFB6EA00B1DB4C /* SearchMoviesUseCaseTests.swift */; };
 		AA5D44A325FF488500744580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44A225FF488500744580 /* AppDelegate.swift */; };
 		AA5D44A725FF488500744580 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44A625FF488500744580 /* ViewController.swift */; };
 		AA5D44AA25FF488500744580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5D44A825FF488500744580 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		42A380F625FFB51500B1DB4C /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		42A380F825FFB51500B1DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A3810125FFB54600B1DB4C /* Movie+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+Stub.swift"; sourceTree = "<group>"; };
+		42A3810C25FFB6EA00B1DB4C /* SearchMoviesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesUseCaseTests.swift; sourceTree = "<group>"; };
 		AA5D449F25FF488500744580 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5D44A225FF488500744580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5D44A625FF488500744580 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		42A380F525FFB51500B1DB4C /* MVVMTests */ = {
 			isa = PBXGroup;
 			children = (
+				42A3810A25FFB68600B1DB4C /* Domain */,
 				42A3810025FFB51D00B1DB4C /* Mocks */,
 				42A380F625FFB51500B1DB4C /* MVVMTests.swift */,
 				42A380F825FFB51500B1DB4C /* Info.plist */,
@@ -167,6 +170,22 @@
 				42A3810125FFB54600B1DB4C /* Movie+Stub.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		42A3810A25FFB68600B1DB4C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				42A3810B25FFB69100B1DB4C /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		42A3810B25FFB69100B1DB4C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				42A3810C25FFB6EA00B1DB4C /* SearchMoviesUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		AA5D449625FF488500744580 = {
@@ -405,6 +424,7 @@
 			files = (
 				42A3810225FFB54600B1DB4C /* Movie+Stub.swift in Sources */,
 				42A380F725FFB51500B1DB4C /* MVVMTests.swift in Sources */,
+				42A3810D25FFB6EA00B1DB4C /* SearchMoviesUseCaseTests.swift in Sources */,
 				42A3810725FFB57300B1DB4C /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
