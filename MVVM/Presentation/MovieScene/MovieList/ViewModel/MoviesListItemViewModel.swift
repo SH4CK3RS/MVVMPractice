@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct MovieListItemViewModel {
+struct MoviesListItemViewModel {
   let title: String
   let overview: String
   let releaseDate: String
   let posterImagPath: String?
 }
 
-extension MovieListItemViewModel {
+extension MoviesListItemViewModel {
   init(movie: Movie) {
     self.title = movie.title ?? ""
     self.posterImagPath = movie.posterPath
