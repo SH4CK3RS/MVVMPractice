@@ -11,6 +11,11 @@ final class MoviesListItemCell: UITableViewCell {
   static let reuseIdentifier = String(describing: MoviesListItemCell.self)
   static let height = CGFloat(130)
   
+  
+  private var viewModel: MoviesListItemViewModel!
+  private var posterImagesRepository: PosterImagesRepository?
+  private var imageLoadTask: Cancellable? { willSet { imageLoadTask?.cancel() } }
+  
   private var titleLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +55,21 @@ final class MoviesListItemCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func fill(
+    with viewModel: MoviesListItemViewModel,
+    posterImagesRepository: PosterImagesRepository?
+  ) {
+    self.viewModel = viewModel
+    self.posterImagesRepository = posterImagesRepository
+    
+    titleLabel.text = viewModel.title
+    dateLabel.text = viewModel.releaseDate
+    overviewLabel.text = viewModel.overview
+    
+  }
+  
+  // MARK: - Private
+  
   private func setupViews() {
     [titleLabel, dateLabel, overviewLabel, posterImageView].forEach {
       self.contentView.addSubview($0)
@@ -81,4 +101,21 @@ final class MoviesListItemCell: UITableViewCell {
       overviewLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -11)
     ])
   }
+  
+  private func updatePosterImage(width: Int) {
+    posterImageView.image = nil
+    guard let posterImagePath = viewModel.posterImagPath else { return }
+    
+    imageLoadTask = posterImagesRepository?.fetchImage(
+      with: posterImagePath,
+      width: width) { [weak self] result in
+      guard let self = self else { return }
+      guard self.viewModel.posterImagPath == posterImagePath else { return }
+      if case let .success(data) = result {
+        self.posterImageView.image = UIImage(data: data)
+      }
+    }
+  }
+  
+  
 }
