@@ -37,6 +37,7 @@
 		AA5D44F625FF511500744580 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44F525FF511500744580 /* EndPoint.swift */; };
 		AA5D44F925FF526300744580 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44F825FF526300744580 /* NetworkConfig.swift */; };
 		AA5D44FC25FF534600744580 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5D44FB25FF534600744580 /* NetworkService.swift */; };
+		AACFCD822604EC8F00C98E3D /* UITableViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCD812604EC8F00C98E3D /* UITableViewController+ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AA5D44F525FF511500744580 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		AA5D44F825FF526300744580 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		AA5D44FB25FF534600744580 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AACFCD812604EC8F00C98E3D /* UITableViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				42A381132601190600B1DB4C /* UIViewController+AddBehaviors.swift */,
+				AACFCD812604EC8F00C98E3D /* UITableViewController+ActivityIndicator.swift */,
 			);
 			path = Extennsions;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				42A380EE25FFB22000B1DB4C /* MoviesListTableViewController.swift in Sources */,
 				AA5D44BF25FF495500744580 /* MovieQuery.swift in Sources */,
 				AA5D44FC25FF534600744580 /* NetworkService.swift in Sources */,
+				AACFCD822604EC8F00C98E3D /* UITableViewController+ActivityIndicator.swift in Sources */,
 				AA5D44EC25FF4FBB00744580 /* DefaultMoviesRepository.swift in Sources */,
 				42A381142601190600B1DB4C /* UIViewController+AddBehaviors.swift in Sources */,
 				AA5D44A725FF488500744580 /* ViewController.swift in Sources */,
@@ -610,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -665,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
