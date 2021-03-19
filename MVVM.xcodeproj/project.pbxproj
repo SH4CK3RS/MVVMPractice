@@ -43,6 +43,7 @@
 		AACFCD9D260500B800C98E3D /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCD9C260500B800C98E3D /* AccessibilityIdentifier.swift */; };
 		AACFCDA226050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDA126050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift */; };
 		AACFCDA826050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDA726050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift */; };
+		AACFCDAC2605102C00C98E3D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDAB2605102C00C98E3D /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		AACFCD9C260500B800C98E3D /* AccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifier.swift; sourceTree = "<group>"; };
 		AACFCDA126050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonEmptyTitleNavigationBarBehavior.swift; sourceTree = "<group>"; };
 		AACFCDA726050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackStyleNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		AACFCDAB2605102C00C98E3D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				42A38112260118B900B1DB4C /* Extennsions */,
 				42A380E025FFA37F00B1DB4C /* Observable.swift */,
 				AACFCD9C260500B800C98E3D /* AccessibilityIdentifier.swift */,
+				AACFCDAB2605102C00C98E3D /* LoadingView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				AA5D44A325FF488500744580 /* AppDelegate.swift in Sources */,
 				AA5D44E125FF4DD300744580 /* FetchRecentMovieQueriesUseCase.swift in Sources */,
 				AACFCD9D260500B800C98E3D /* AccessibilityIdentifier.swift in Sources */,
+				AACFCDAC2605102C00C98E3D /* LoadingView.swift in Sources */,
 				AACFCDA826050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift in Sources */,
 				AA31258E260475C00059D660 /* MovieListViewModel.swift in Sources */,
 				AA5D44F625FF511500744580 /* EndPoint.swift in Sources */,
