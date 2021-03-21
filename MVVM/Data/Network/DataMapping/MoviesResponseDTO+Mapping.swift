@@ -45,3 +45,35 @@ extension MoviesResponseDTO {
     let releaseDate: String?
   }
 }
+
+// MARK: - Make Domain
+
+extension MoviesResponseDTO.MovieDTO {
+  func toDomain() -> Movie {
+    return .init(
+      id: Movie.Identifier(id),
+      title: title,
+      genre: genre?.toDomain(),
+      posterPath: posterPath,
+      overview: overview,
+      releaseDate: dateFormatter.date(from: releaseDate ?? ""))
+  }
+}
+
+extension MoviesResponseDTO.MovieDTO.GenreDTO {
+  func toDomain() -> Movie.Genre {
+    switch self {
+    case .adventure: return .adventure
+    case .scienceFiction: return .scienceFiction
+    }
+  }
+}
+
+private let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    formatter.calendar = Calendar(identifier: .iso8601)
+    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    return formatter
+}()
