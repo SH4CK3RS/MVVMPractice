@@ -62,14 +62,16 @@ class MoviesListViewController: UIViewController, Alertable {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
+    setupBehaviours()
     bind(to: viewModel)
     viewModel.viewDidLoad()
   }
   
-  
-  
   private func bind(to viewModel: MoviesListViewModel) {
-    
+    viewModel.items.observe(on: self) { [weak self] _ in self?.updateItems() }
+    viewModel.loading.observe(on: self) { [weak self] in self?.updateLoading($0) }
+    viewModel.query.observe(on: self) { [weak self] in self?.updateSearchQuery($0) }
+    viewModel.error.observe(on: self) { [weak self] in self?.showError($0) }
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -77,11 +79,61 @@ class MoviesListViewController: UIViewController, Alertable {
     searchController.isActive = false
   }
   
+  // MARK: - Private
   
   private func setupViews() {
     title = viewModel.screenTitle
     emptyDataLabel.text = viewModel.emptyDataTitle
     setupSearchController()
+  }
+  
+  private func setupBehaviours() {
+    self.addBehaviors(
+      [
+        BackButtonEmptyTitleNavigationBarBehavior(),
+        BlackStyleNavigationBarBehavior()
+      ]
+    )
+  }
+  
+  private func updateItems() {
+    moviesTableViewController?.reload()
+  }
+  
+  private func updateLoading(_ loading: MoviesListViewModelLoading?) {
+    emptyDataLabel.isHidden = true
+    moviesListContainer.isHidden = true
+    suggestionListContainer.isHidden = true
+    LoadingView.hide()
+    
+    switch loading {
+    case .fullScreen: LoadingView.show()
+    case .nextPage: moviesListContainer.isHidden = false
+    case .none:
+      moviesListContainer.isHidden = viewModel.isEmpty
+      emptyDataLabel.isHidden = !viewModel.isEmpty
+    }
+    
+    moviesTableViewController?.updateLoading(loading)
+    updateQueriesSuggestions()
+  }
+  
+  private func updateQueriesSuggestions() {
+    guard searchController.searchBar.isFirstResponder else {
+      viewModel.closeQueriesSuggestion()
+      return
+    }
+    viewModel.showQueriesSuggestion()
+  }
+  
+  private func updateSearchQuery(_ query: String) {
+    searchController.isActive = false
+    searchController.searchBar.text = query
+  }
+  
+  private func showError(_ error: String) {
+    guard !error.isEmpty else { return }
+    showAlert(title: viewModel.errorTitle, message: error)
   }
   
   private func setupSearchController() {
