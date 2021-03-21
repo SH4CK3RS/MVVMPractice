@@ -159,6 +159,7 @@
 		42A380E525FFA9A700B1DB4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AACFCD892604F6FF00C98E3D /* MoviesListViewController.swift */,
 				42A380E625FFAA5E00B1DB4C /* MoviesListTableView */,
 			);
 			path = View;
@@ -169,7 +170,6 @@
 			children = (
 				42A380E725FFAA6300B1DB4C /* Cells */,
 				42A380ED25FFB22000B1DB4C /* MoviesListTableViewController.swift */,
-				AACFCD892604F6FF00C98E3D /* MoviesListViewController.swift */,
 			);
 			path = MoviesListTableView;
 			sourceTree = "<group>";

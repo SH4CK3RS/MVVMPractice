@@ -22,7 +22,7 @@ public final class Observable<Value> {
     }
   }
   
-  public init(value: Value) {
+  public init(_ value: Value) {
     self.value = value
   }
   

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DefaultMoviesRepository {
-  
-  private let dataTransferService: DataTransferService
-}
+//final class DefaultMoviesRepository {
+//
+//  private let dataTransferService: DataTransferService
+//}
