@@ -47,6 +47,8 @@
 		AACFCDB22607720200C98E3D /* MoviesSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDB12607720200C98E3D /* MoviesSceneDIContainer.swift */; };
 		AACFCDC92607772B00C98E3D /* MoviesRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDC82607772B00C98E3D /* MoviesRequestDTO+Mapping.swift */; };
 		AACFCDCF2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDCE2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift */; };
+		AACFCDD626077F1100C98E3D /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDD426077F1100C98E3D /* CoreDataStorage.xcdatamodeld */; };
+		AACFCDDA2607865500C98E3D /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDD92607865500C98E3D /* CoreDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		AACFCDB12607720200C98E3D /* MoviesSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSceneDIContainer.swift; sourceTree = "<group>"; };
 		AACFCDC82607772B00C98E3D /* MoviesRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
 		AACFCDCE2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		AACFCDD526077F1100C98E3D /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
+		AACFCDD92607865500C98E3D /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +349,7 @@
 		AA5D44E925FF4F9E00744580 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AACFCDD226077EF300C98E3D /* PersistentStorage */,
 				AACFCDC62607771700C98E3D /* Network */,
 				AA5D44EA25FF4FA500744580 /* Repositories */,
 			);
@@ -426,6 +431,23 @@
 				AACFCDCE2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		AACFCDD226077EF300C98E3D /* PersistentStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AACFCDD326077F0100C98E3D /* CoreDataStorage */,
+			);
+			path = PersistentStorage;
+			sourceTree = "<group>";
+		};
+		AACFCDD326077F0100C98E3D /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AACFCDD426077F1100C98E3D /* CoreDataStorage.xcdatamodeld */,
+				AACFCDD92607865500C98E3D /* CoreDataStorage.swift */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +566,7 @@
 				AA5D44DB25FF4B8600744580 /* MoviesQueriesRepository.swift in Sources */,
 				AA312598260496330059D660 /* ConnectionError.swift in Sources */,
 				42A380E925FFAA8500B1DB4C /* MoviesListItemCell.swift in Sources */,
+				AACFCDDA2607865500C98E3D /* CoreDataStorage.swift in Sources */,
 				AA5D44BA25FF48D500744580 /* Movie.swift in Sources */,
 				42A380E125FFA37F00B1DB4C /* Observable.swift in Sources */,
 				AACFCD8A2604F6FF00C98E3D /* MoviesListViewController.swift in Sources */,
@@ -567,6 +590,7 @@
 				AACFCD9D260500B800C98E3D /* AccessibilityIdentifier.swift in Sources */,
 				AACFCDAC2605102C00C98E3D /* LoadingView.swift in Sources */,
 				AACFCDA826050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift in Sources */,
+				AACFCDD626077F1100C98E3D /* CoreDataStorage.xcdatamodeld in Sources */,
 				AA31258E260475C00059D660 /* MovieListViewModel.swift in Sources */,
 				AA5D44F625FF511500744580 /* EndPoint.swift in Sources */,
 				AACFCDA226050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
@@ -832,6 +856,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AACFCDD426077F1100C98E3D /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AACFCDD526077F1100C98E3D /* CoreDataStorage.xcdatamodel */,
+			);
+			currentVersion = AACFCDD526077F1100C98E3D /* CoreDataStorage.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AA5D449725FF488500744580 /* Project object */;
 }
