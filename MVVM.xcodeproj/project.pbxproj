@@ -55,6 +55,8 @@
 		AACFCDF22607968000C98E3D /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDF12607968000C98E3D /* RepositoryTask.swift */; };
 		AACFCDF82607988D00C98E3D /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDF72607988D00C98E3D /* APIEndpoints.swift */; };
 		AAD45B9526173ECE00A6F4D6 /* AppApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */; };
+		AAD45B99261740E400A6F4D6 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */; };
+		AAD45B9D261741A200A6F4D6 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B9C261741A200A6F4D6 /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		AACFCDF12607968000C98E3D /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
 		AACFCDF72607988D00C98E3D /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApperance.swift; sourceTree = "<group>"; };
+		AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		AAD45B9C261741A200A6F4D6 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,7 +288,6 @@
 				AA5D44E925FF4F9E00744580 /* Data */,
 				AA5D44C925FF49D700744580 /* Common */,
 				AA5D44B725FF48C300744580 /* Domain */,
-				AA5D44A225FF488500744580 /* AppDelegate.swift */,
 				AA5D44A625FF488500744580 /* ViewController.swift */,
 				AA5D44A825FF488500744580 /* Main.storyboard */,
 				AA5D44AB25FF488700744580 /* Assets.xcassets */,
@@ -416,8 +419,10 @@
 		AACFCDAF260771EA00C98E3D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				AA5D44A225FF488500744580 /* AppDelegate.swift */,
 				AACFCDB0260771F100C98E3D /* DIContainer */,
 				AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */,
+				AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				AACFCDB12607720200C98E3D /* MoviesSceneDIContainer.swift */,
+				AAD45B9C261741A200A6F4D6 /* AppDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				AACFCDDA2607865500C98E3D /* CoreDataStorage.swift in Sources */,
 				AACFCDF22607968000C98E3D /* RepositoryTask.swift in Sources */,
 				AA5D44BA25FF48D500744580 /* Movie.swift in Sources */,
+				AAD45B99261740E400A6F4D6 /* AppFlowCoordinator.swift in Sources */,
 				42A380E125FFA37F00B1DB4C /* Observable.swift in Sources */,
 				AACFCD8A2604F6FF00C98E3D /* MoviesListViewController.swift in Sources */,
 				AACFCDB22607720200C98E3D /* MoviesSceneDIContainer.swift in Sources */,
@@ -640,6 +647,7 @@
 				AACFCDD626077F1100C98E3D /* CoreDataStorage.xcdatamodeld in Sources */,
 				AA31258E260475C00059D660 /* MovieListViewModel.swift in Sources */,
 				AACFCDF82607988D00C98E3D /* APIEndpoints.swift in Sources */,
+				AAD45B9D261741A200A6F4D6 /* AppDIContainer.swift in Sources */,
 				AA5D44F625FF511500744580 /* EndPoint.swift in Sources */,
 				AACFCDA226050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
 				AA5D44CE25FF4A1A00744580 /* SearchMoviesUseCase.swift in Sources */,
