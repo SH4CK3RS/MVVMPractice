@@ -49,6 +49,12 @@
 		AACFCDCF2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDCE2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift */; };
 		AACFCDD626077F1100C98E3D /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDD426077F1100C98E3D /* CoreDataStorage.xcdatamodeld */; };
 		AACFCDDA2607865500C98E3D /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDD92607865500C98E3D /* CoreDataStorage.swift */; };
+		AACFCDE326078B9100C98E3D /* MoviesResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDE226078B9100C98E3D /* MoviesResponseEntity+Mapping.swift */; };
+		AACFCDE926078F3800C98E3D /* MoviesResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDE826078F3800C98E3D /* MoviesResponseStorage.swift */; };
+		AACFCDED26078FBE00C98E3D /* CoreDataMoviesResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDEC26078FBE00C98E3D /* CoreDataMoviesResponseStorage.swift */; };
+		AACFCDF22607968000C98E3D /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDF12607968000C98E3D /* RepositoryTask.swift */; };
+		AACFCDF82607988D00C98E3D /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACFCDF72607988D00C98E3D /* APIEndpoints.swift */; };
+		AAD45B9526173ECE00A6F4D6 /* AppApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +113,12 @@
 		AACFCDCE2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		AACFCDD526077F1100C98E3D /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
 		AACFCDD92607865500C98E3D /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		AACFCDE226078B9100C98E3D /* MoviesResponseEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesResponseEntity+Mapping.swift"; sourceTree = "<group>"; };
+		AACFCDE826078F3800C98E3D /* MoviesResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponseStorage.swift; sourceTree = "<group>"; };
+		AACFCDEC26078FBE00C98E3D /* CoreDataMoviesResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMoviesResponseStorage.swift; sourceTree = "<group>"; };
+		AACFCDF12607968000C98E3D /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
+		AACFCDF72607988D00C98E3D /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApperance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +371,7 @@
 		AA5D44EA25FF4FA500744580 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AACFCDF02607967700C98E3D /* Utils */,
 				AA5D44EB25FF4FBB00744580 /* DefaultMoviesRepository.swift */,
 			);
 			path = Repositories;
@@ -404,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				AACFCDB0260771F100C98E3D /* DIContainer */,
+				AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -420,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				AACFCDC72607771700C98E3D /* DataMapping */,
+				AACFCDF72607988D00C98E3D /* APIEndpoints.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -436,6 +451,7 @@
 		AACFCDD226077EF300C98E3D /* PersistentStorage */ = {
 			isa = PBXGroup;
 			children = (
+				AACFCDE026078B5C00C98E3D /* MoviesResponseStorage */,
 				AACFCDD326077F0100C98E3D /* CoreDataStorage */,
 			);
 			path = PersistentStorage;
@@ -448,6 +464,32 @@
 				AACFCDD92607865500C98E3D /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		AACFCDE026078B5C00C98E3D /* MoviesResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AACFCDE126078B7600C98E3D /* EntityMapping */,
+				AACFCDE826078F3800C98E3D /* MoviesResponseStorage.swift */,
+				AACFCDEC26078FBE00C98E3D /* CoreDataMoviesResponseStorage.swift */,
+			);
+			path = MoviesResponseStorage;
+			sourceTree = "<group>";
+		};
+		AACFCDE126078B7600C98E3D /* EntityMapping */ = {
+			isa = PBXGroup;
+			children = (
+				AACFCDE226078B9100C98E3D /* MoviesResponseEntity+Mapping.swift */,
+			);
+			path = EntityMapping;
+			sourceTree = "<group>";
+		};
+		AACFCDF02607967700C98E3D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AACFCDF12607968000C98E3D /* RepositoryTask.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,10 +605,13 @@
 			files = (
 				AA5D44F225FF501300744580 /* DataTransferService.swift in Sources */,
 				AA5D44CB25FF49E500744580 /* Cancellable.swift in Sources */,
+				AACFCDED26078FBE00C98E3D /* CoreDataMoviesResponseStorage.swift in Sources */,
 				AA5D44DB25FF4B8600744580 /* MoviesQueriesRepository.swift in Sources */,
+				AACFCDE326078B9100C98E3D /* MoviesResponseEntity+Mapping.swift in Sources */,
 				AA312598260496330059D660 /* ConnectionError.swift in Sources */,
 				42A380E925FFAA8500B1DB4C /* MoviesListItemCell.swift in Sources */,
 				AACFCDDA2607865500C98E3D /* CoreDataStorage.swift in Sources */,
+				AACFCDF22607968000C98E3D /* RepositoryTask.swift in Sources */,
 				AA5D44BA25FF48D500744580 /* Movie.swift in Sources */,
 				42A380E125FFA37F00B1DB4C /* Observable.swift in Sources */,
 				AACFCD8A2604F6FF00C98E3D /* MoviesListViewController.swift in Sources */,
@@ -582,6 +627,7 @@
 				AA5D44DE25FF4BEA00744580 /* PosterImagesRepository.swift in Sources */,
 				AA3125922604773A0059D660 /* MoviesListItemViewModel.swift in Sources */,
 				AACFCDC92607772B00C98E3D /* MoviesRequestDTO+Mapping.swift in Sources */,
+				AAD45B9526173ECE00A6F4D6 /* AppApperance.swift in Sources */,
 				AACFCD8F2604F75800C98E3D /* Alertable.swift in Sources */,
 				AA5D44C625FF49AF00744580 /* UseCase.swift in Sources */,
 				AA5D44A325FF488500744580 /* AppDelegate.swift in Sources */,
@@ -589,9 +635,11 @@
 				AACFCDCF2607773D00C98E3D /* MoviesResponseDTO+Mapping.swift in Sources */,
 				AACFCD9D260500B800C98E3D /* AccessibilityIdentifier.swift in Sources */,
 				AACFCDAC2605102C00C98E3D /* LoadingView.swift in Sources */,
+				AACFCDE926078F3800C98E3D /* MoviesResponseStorage.swift in Sources */,
 				AACFCDA826050C5100C98E3D /* BlackStyleNavigationBarBehavior.swift in Sources */,
 				AACFCDD626077F1100C98E3D /* CoreDataStorage.xcdatamodeld in Sources */,
 				AA31258E260475C00059D660 /* MovieListViewModel.swift in Sources */,
+				AACFCDF82607988D00C98E3D /* APIEndpoints.swift in Sources */,
 				AA5D44F625FF511500744580 /* EndPoint.swift in Sources */,
 				AACFCDA226050B2300C98E3D /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
 				AA5D44CE25FF4A1A00744580 /* SearchMoviesUseCase.swift in Sources */,
