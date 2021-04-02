@@ -8,5 +8,9 @@
 import Foundation
 
 final class AppDIContainer {
+  lazy var appConfiguration = AppConfiguration()
   
+  // MARK: - Network
+  
+  // MARK: - DIContainer
 }

@@ -57,6 +57,7 @@
 		AAD45B9526173ECE00A6F4D6 /* AppApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */; };
 		AAD45B99261740E400A6F4D6 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */; };
 		AAD45B9D261741A200A6F4D6 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45B9C261741A200A6F4D6 /* AppDIContainer.swift */; };
+		AAD45BAF261745D400A6F4D6 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD45BAE261745D400A6F4D6 /* AppConfigurations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApperance.swift; sourceTree = "<group>"; };
 		AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		AAD45B9C261741A200A6F4D6 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		AAD45BAE261745D400A6F4D6 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 				AACFCDB0260771F100C98E3D /* DIContainer */,
 				AAD45B9426173ECE00A6F4D6 /* AppApperance.swift */,
 				AAD45B98261740E400A6F4D6 /* AppFlowCoordinator.swift */,
+				AAD45BAE261745D400A6F4D6 /* AppConfigurations.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				42A381142601190600B1DB4C /* UIViewController+AddBehaviors.swift in Sources */,
 				AA5D44A725FF488500744580 /* ViewController.swift in Sources */,
 				AA5D44D825FF4B2100744580 /* MoviesRepository.swift in Sources */,
+				AAD45BAF261745D400A6F4D6 /* AppConfigurations.swift in Sources */,
 				AA5D44DE25FF4BEA00744580 /* PosterImagesRepository.swift in Sources */,
 				AA3125922604773A0059D660 /* MoviesListItemViewModel.swift in Sources */,
 				AACFCDC92607772B00C98E3D /* MoviesRequestDTO+Mapping.swift in Sources */,
@@ -846,10 +850,13 @@
 		AA5D44B425FF488700744580 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.themoviedb.org";
+				API_KEY = 2696829a81b1b5827d515ff121700838;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97C96KP84G;
+				IMAGE_BASE_URL = "http://image.tmdb.org";
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -865,10 +872,13 @@
 		AA5D44B525FF488700744580 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.themoviedb.org";
+				API_KEY = 2696829a81b1b5827d515ff121700838;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97C96KP84G;
+				IMAGE_BASE_URL = "http://image.tmdb.org";
 				INFOPLIST_FILE = MVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
