@@ -53,8 +53,8 @@ public final class DefaultNetworkService {
   
   public init(
     config: NetworkConfigurable,
-    sessionManager: NetworkSessionManager,
-    logger: NetworkErrorLogger
+    sessionManager: NetworkSessionManager = DefaultNetworkSessionManager(),
+    logger: NetworkErrorLogger = DefaultNetworkLogger()
   ) {
     self.config = config
     self.sessionManager = sessionManager
